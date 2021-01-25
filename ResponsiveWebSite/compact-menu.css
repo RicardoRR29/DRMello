@@ -7,6 +7,11 @@
     width: 100vw;
     background-color: #eee;
     position: fixed;
+    display: none;
+}
+
+.sidebar.active {
+    display: flex;
 }
 
 .sidebar a {

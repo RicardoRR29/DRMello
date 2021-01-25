@@ -6,12 +6,16 @@ setTimeout(showWhatsapp,3000)
 const contact_area = document.querySelector('.contact-area')
 window.addEventListener('scroll', showContactArea)
 
+const compactMenu = document.getElementById('compact-menu')
+const sidebar = document.querySelector('.sidebar')
+compactMenu.addEventListener('click', toggleMenu)
+
+//let frases = ["Organização da tomada de decisão", "Desconhecimento do próximo salto de negócio", "Dificuldade de crescimento", "Expansão de mercado", "Perda de mercado"] 
 
 
-let frases = ["Organização da tomada de decisão", "Desconhecimento do próximo salto de negócio", "Dificuldade de crescimento", "Expansão de mercado", "Perda de mercado"] 
-
-
-
+function toggleMenu() {
+    sidebar.classList.toggle('active')
+}
 
 function changeNav() {
     if(window.scrollY > nav.offsetHeight + 150) {
