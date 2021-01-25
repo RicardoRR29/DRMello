@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+.menu {
+    display: none;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+nav .logo {
+    margin-left: 20px;
+}
+
+
+nav .logo span{
+    border: 1px solid #fff;
+    padding: 2px 4px;
+}
+
+nav .compact-menu {
+    margin-right: 20px;
+}
+
+nav {
+
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    height: 60px;
+
+    width: 100vw;
+    padding: 0 1vw;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+.h2 {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+.hero {
+    margin-top: 60px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 10;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.6);
+    z-index: 1;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-section .title {
+    top: 40%;
+    z-index: 100;
+}
+
+
+.text-section {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+    
+    color: #575757;
+}
+
+.text-section .title {
+    margin-top: 5px;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.text-section .text {
+    font-size: 14px;
+}
+
+.cards-section {
+    width: 100vw;
+    color: rgb(80, 80, 80);
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.grid-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 20px;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.card i {
+    padding-top: 25px;
+    font-size: 18px;
+}
+
+.card h2 {
+    font-size: 15px;
+    text-align: center;
+    text-size-adjust: auto;
+    padding-bottom: 15px;
+}
+
+.slider-section {
+    position: relative;
+    background-color: #222;
+}
