@@ -19,6 +19,7 @@ nav {
 }
 
 nav .logo {
+    font-weight: bold;
     font-size: 30px;
     margin-left: 20px;
 }
@@ -112,13 +113,12 @@ img{
     z-index: 10;
 }
 .text-section {
-
+    color: #000;
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     
-    color: #575757;
 }
 
 .text-section .title {
@@ -129,6 +129,7 @@ img{
 
 .text-section .text {
     font-size: 14px;
+    letter-spacing: 1.5px;
 }
 
 .cards-section {
