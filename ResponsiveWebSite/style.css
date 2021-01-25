@@ -154,12 +154,12 @@ img{
 .card i {
     padding: 1vw;
 
-    font-size: 16px;
+    font-size: 6vw;
 }
 
 .card h2 {
     padding: 1vw;
-    font-size: 8px;
+    font-size: 3vw;
     margin: 1vw;
     text-align: center;
     text-size-adjust: auto;
