@@ -125,16 +125,17 @@ img{
 .cards-section {
     width: 100vw;
     color: rgb(80, 80, 80);
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
 .grid-container {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    gap: 10px;
+    row-gap: 10px;
+
     padding: 10px 10px;
     width: 100%;
 }
@@ -143,7 +144,7 @@ img{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -151,15 +152,17 @@ img{
 }
 
 .card i {
-    padding-top: 25px;
-    font-size: 18px;
+    padding-top: 10px;
+
+    font-size: 16px;
 }
 
 .card h2 {
-    font-size: 15px;
+    font-size: 8px;
+    /*padding: 2px;*/
     text-align: center;
     text-size-adjust: auto;
-    padding-bottom: 15px;
+    /*padding-bottom: 15px;*/
 }
 
 .slider-section {
