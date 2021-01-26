@@ -1,0 +1,57 @@
+.contact-area {
+    display: flex;
+    margin: clamp(8%, 18vw, 40%);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);   
+    border-radius: 3vw;
+
+}
+
+.contact-block .contact-title {
+    color: #555;
+    font-size: clamp(1rem,8vw,20rem);
+    margin-bottom: 1rem;
+
+}
+.contact-block div{
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-block:nth-child(n-1) {
+    font: 'Lato';
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.contact-area input,
+.contact-area button,
+.contact-block textarea {
+    font-family: 'Lato';
+    margin-bottom: .8rem;
+    font-size: 3vw;
+    width: 30vw;
+    border: none;
+    border-bottom: 1px solid #bbb;
+}
+
+.contact-block textarea {
+    margin-bottom: clamp(.8rem, 10vw, 2rem);
+    resize: none;
+}
+
+.contact-area input:focus,
+.contact-area button:focus,
+.contact-block textarea:focus {
+    outline: 0;
+}
+.contact-block button {
+    color: #fff;
+    background-color: #000;
+    border-radius: 1vw;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);   
+
+}
