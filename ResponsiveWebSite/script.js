@@ -1,10 +1,10 @@
 
-const nav = document.querySelector('.nav')
+const nav = document.querySelector('nav')
 window.addEventListener('scroll', changeNav)
 setTimeout(showWhatsapp,3000)
 
 const contact_area = document.querySelector('.contact-area')
-window.addEventListener('scroll', showContactArea)
+//window.addEventListener('scroll', showContactArea)
 
 const compactMenu = document.getElementById('compact-menu')
 const sidebar = document.querySelector('.sidebar')
@@ -43,9 +43,12 @@ function showWhatsapp() {
 }
 
 function changeNav() {
-    if(window.scrollY > nav.offsetHeight + 150) {
+    if(window.scrollY > nav.offsetHeight + 100) {
         nav.classList.add('active')
+        console.log('sim')
     } else {
+        console.log('nao')
+
         nav.classList.remove('active')
     }
 }
@@ -64,7 +67,7 @@ function showWhatsapp() {
     }, this.animationDelay + 3000);   
 
 }
-
+/*
 function showContactArea() {
     if(window.scrollY > 2200) {
         contact_area.style.display = 'flex'
@@ -72,3 +75,5 @@ function showContactArea() {
         contact_area.style.display = 'none'
     }
 }
+
+*/
