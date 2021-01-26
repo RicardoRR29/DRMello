@@ -64,7 +64,75 @@ nav.active .container {
     padding: 10px 0;
 }
 
-nav a.current, nav a:hover {
-    color: #c0392b;
-    font-weight: bold;
-} 
+nav li a {
+    border: 1px solid #222;
+    transition: border .5s;
+    padding: 3px;
+}
+nav li a.current, nav li a:hover {
+    border: 1px solid #fff;
+    padding: 3px;
+}
+
+nav.active li a {
+    height: 4px;
+    color: #000;
+    border: 1px solid #fff;
+}
+nav.active li a.current, nav.active li a:hover {
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+
+
+@media(min-width: 1050px) {
+    
+    #compact-menu {
+        display: none;
+        visibility: hidden;
+    }
+    
+    nav {
+        height: 120px;
+        justify-content: space-between;
+    }
+    .menu {
+        visibility: visible;
+        margin-right: 5vw;
+    }
+    .menu ul {
+        text-align: center;
+        display: flex;
+    }
+    .menu li {
+        list-style-type: none;
+    }
+    .menu li a{
+        font-family: 'Lato';
+        font-weight: 300;
+        margin: 0.8vw;
+        color: #fff;
+        font-size: 1.5vw;
+        text-decoration: none;
+    }
+    nav .logo {
+        font-size: 40px;
+    }
+    /*
+    nav.active li a {
+        height: 4px;
+        color: #000;
+    }
+
+    nav.active li a.current {
+        border: 1px solid #222;
+        padding: 3px;
+    }
+    
+    nav li a.current, nav li a:hover {
+        border: 1px solid #fff;
+        padding: 3px;
+    }
+    */
+}

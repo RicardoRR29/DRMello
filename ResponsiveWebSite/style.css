@@ -3,7 +3,7 @@
 }
 
 .menu {
-    display: none;
+    visibility: hidden;
 }
 
 body{
@@ -11,3 +11,4 @@ body{
     font-weight: 300;
     margin: 0;
 }
+
