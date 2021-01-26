@@ -1,28 +1,39 @@
 
 .sidebar {
     margin: 0;
-    z-index: 400;
-    display: flex;
+    z-index: 100;
     flex-direction: column;
     width: 100vw;
-    background-color: #eee;
+    background-color: #f9f9f9;
     position: fixed;
-    display: none;
+    height: 0;
+    transition: height 1s ease;
 }
+
 
 .sidebar.active {
-    display: flex;
+    height: 38vw;
 }
 
+
 .sidebar a {
+    z-index: 1;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 8vw;
     text-decoration: none;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+
 }
 
+.sidebar.active a {
+    opacity: 1;
+    visibility: visible;
+}
 .sidebar a:hover {
     color: #fff;
     background-color: #333;

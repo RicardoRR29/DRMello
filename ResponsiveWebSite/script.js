@@ -12,9 +12,34 @@ compactMenu.addEventListener('click', toggleMenu)
 
 //let frases = ["Organização da tomada de decisão", "Desconhecimento do próximo salto de negócio", "Dificuldade de crescimento", "Expansão de mercado", "Perda de mercado"] 
 
-
 function toggleMenu() {
     sidebar.classList.toggle('active')
+}
+
+/*
+function toggleMenu() {
+    if(sidebar.classList.length == 1){
+        sidebar.classList.add('active')
+        sidebar.style.opacity = 0;
+        setTimeout(() => {
+            sidebar.style.opacity = 1;
+        }, this.animationDelay + 3000);
+    } else {
+        sidebar.classList.remove('active')
+        sidebar.style.opacity = 1;
+        setTimeout(() => {
+            sidebar.style.opacity = 0;
+        }, this.animationDelay + 3000);
+    }
+     
+}
+*/
+function showWhatsapp() {
+    wp = document.getElementById('wp')
+    wp.style.display = 'block'
+    wp.addEventListener('click', mandarMensagem)
+    
+
 }
 
 function changeNav() {

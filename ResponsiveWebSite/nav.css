@@ -1,0 +1,45 @@
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+
+nav .logo span{
+    border: 1px solid #fff;
+    padding: 2px 4px;
+    padding-right: 5px;
+}
+
+nav #compact-menu {
+    margin-right: 24px;
+}
+
+nav .bar {
+    background-color: #fff;
+    height: 3px;
+    margin: 6px;
+    width: 18px;
+}
+
+nav {
+
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    height: 90px;
+
+    width: 100vw;
+    padding: 0 1vw;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
