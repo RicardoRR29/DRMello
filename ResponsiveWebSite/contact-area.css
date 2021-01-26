@@ -31,15 +31,15 @@
 .contact-area button,
 .contact-block textarea {
     font-family: 'Lato';
-    margin-bottom: .8rem;
+    margin-bottom: clamp(.2rem, 1vw, 2rem);
     font-size: 3vw;
     width: 30vw;
     border: none;
-    border-bottom: 1px solid #bbb;
+    border-bottom: .2vw solid #bbb;
 }
 
 .contact-block textarea {
-    margin-bottom: clamp(.8rem, 10vw, 2rem);
+    margin-bottom: clamp(.8rem, 6vw, 2rem);
     resize: none;
 }
 
@@ -47,6 +47,13 @@
 .contact-area button:focus,
 .contact-block textarea:focus {
     outline: 0;
+}
+.contact-area input::placeholder,
+.contact-area button::placeholder,
+.contact-block textarea::placeholder {
+    font-family: 'Lato';
+    font-size: clamp(.5rem,3vw,4rem);
+    color: #999;
 }
 .contact-block button {
     color: #fff;
