@@ -5,7 +5,7 @@
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     right: 4vw;
-    bottom: clamp(1rem,10vw, 2rem);
+    bottom: clamp(1.5rem,12vw, 3rem);
 
 }
 

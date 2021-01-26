@@ -1,26 +1,23 @@
 
 .cards-section {
-    width: 100vw;
+    width: 80vw;
+    justify-content: center;
     color: rgb(80, 80, 80);
-}
-
-
-.grid-container {
-    margin-top: 20px;
+    margin: 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1.4rem;
+    gap: 4vw;
+    left: 50%;
 
-    padding: 10px 10px;
-    width: 100%;
+    padding: 2vw 2vw;
 }
 
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -34,10 +31,29 @@
 }
 
 .card h2 {
-    padding: 1vw;
     font-size: 3vw;
     margin: 1vw;
     text-align: center;
     text-size-adjust: auto;
     /*padding-bottom: 15px;*/
+}
+
+@media (min-width: 500px) {
+
+    .cards-section {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .card {
+        padding: 1vw;
+
+    }
+    .card h2 {
+        padding: 1vw;
+        font-size: 1.5vw;
+        margin: 1vw;
+        text-align: center;
+        text-size-adjust: auto;
+        /*padding-bottom: 15px;*/
+    }
 }

@@ -7,7 +7,6 @@ nav {
 }
 
 nav .logo {
-    font-weight: bold;
     font-size: 30px;
     margin-left: 20px;
 }
@@ -42,4 +41,5 @@ nav {
     padding: 0 1vw;
     transition: all 0.3s ease-in-out;
     z-index: 100;
+    
 }
