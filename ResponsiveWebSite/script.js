@@ -45,9 +45,7 @@ function showWhatsapp() {
 function changeNav() {
     if(window.scrollY > nav.offsetHeight + 100) {
         nav.classList.add('active')
-        console.log('sim')
     } else {
-        console.log('nao')
 
         nav.classList.remove('active')
     }
@@ -77,3 +75,40 @@ function showContactArea() {
 }
 
 */
+
+const servCards = document.querySelectorAll('.servicos-card div')
+const servTexts = document.querySelectorAll('.servicos-card p')
+
+const texts = [`<p class="serv-card-text">Por meio de registros adequados e de um bom acompanhamento por parte do gestor, é possível obter informações que contribuam para o planejamento do negócio e para a otimização dos resultados como um todo.
+<br>Dessa forma, a gestão financeira engloba todas as atividades vinculadas ao controle dos recursos financeiros da empresa, visando garantir que a sociedade empresarial tenha dinheiro suficiente para manutenção, investimentos e crescimento próprio.
+</p>`,`<p class="serv-card-text">Por meio de registros adequados e de um bom acompanhamento por parte do gestor, é possível obter informações que contribuam para o planejamento do negócio e para a otimização dos resultados como um todo.
+<br>Dessa forma, a gestão financeira engloba todas as atividades vinculadas ao controle dos recursos financeiros da empresa, visando garantir que a sociedade empresarial tenha dinheiro suficiente para manutenção, investimentos e crescimento próprio.
+</p>`]
+
+servCards.forEach( card => {
+    card.addEventListener('mouseover', setingZIndexInside)
+    card.addEventListener('mouseout', setingZIndexOut)
+})
+
+function setingZIndexInside(e) {
+    let servico = e.target
+    servico.style.zIndex = '100'
+    servico.style.height = 'auto'
+    console.log(servico.offsetParent.className)
+
+    if(servico.offsetParent.className == 'servico-left') {
+        console.log(servico)
+    }
+    /*
+    if(e.target.className == 'serv-card-title') {
+
+        servTexts.forEach(text => {
+            if(e.target.offsetParent == text.offsetParent){
+                text.style.display = 'block'
+            }
+        })
+    }
+    */
+}
+
+
