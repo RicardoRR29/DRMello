@@ -53,16 +53,16 @@
 
 .servicos-section .servico-left:hover {
     width: 65vw;
-    z-index: 100;
+    z-index: 50;
 }
 
 .servicos-section .servico-right:hover {
     left: 15vw;
     width: 65vw;
-    z-index: 100;
+    z-index: 50;
 }
 
-
+/*
 .servicos-section .servico-right p,
 .servicos-section .servico-left p {
     display: none;
@@ -73,7 +73,7 @@
 .servicos-section .servico-left:hover p {
     display: block;
 }
-
+*/
 
 .serv-card-title {
     z-index: 1;
@@ -91,5 +91,5 @@
     line-height: 3vw;
     padding: 5vw;
     padding-top: 0;
-
+    display: none;
 }
