@@ -86,33 +86,26 @@ const texts = [`<p class="serv-card-text">Por meio de registros adequados e de u
 </p>`]
 
 servCards.forEach( card => {
-    card.addEventListener('mouseover', setingZIndexInside)
-    card.addEventListener('mouseout', setingZIndexOut)
+    card.addEventListener('mouseover', expandingTextCard)
+    card.addEventListener('mouseleave', retractTextCard)
 })
 
-function setingZIndexInside(e) {
-    //console.log(e.target)
+function expandingTextCard(e) {
     const cardItem = e.target
-    console.log(e.target)
-    console.log('last ',cardItem.lastElementChild)
-    console.log('item ', cardItem)
 
-    if(cardItem.className == 'servicos-section' || cardItem.offsetParent.className == 'servicos-section'){
-        console.log(cardItem.className)
-
-        if(cardItem.nextElementSlibling.className == 'serv-card-title' || cardItem.lastElementChild.className == 'serv-card-title') {
-            console.log('right')
-        } else {
-            console.log('left')
-        }
+    if(cardItem.className == 'serv-card-title'){
+        setTimeout(unfade(cardItem.nextElementSibling),1000)
     }
-    //console.log(cardItem.nextElementSibling ? cardItem.nextElementSibling : cardItem.previousElementSibling)
-
 }
 
-function setingZIndexOut (e) {
-    //console.log(e.target)
-
+function retractTextCard (e) {
+    let card = e.target
+    
+    console.log('card',card)
+    if(card.className == 'serv-card-title') {
+        fade(card.nextElementSibling)
+        
+    }
 }
 
 
@@ -126,19 +119,24 @@ function fade(element) {
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
-    }, 50);
+    }, 5);
 }
 
 function unfade(element) {
     var op = 0.1;  // initial opacity
     element.style.display = 'block';
+    element.style.maxHeight = '100%'
+    console.log(element)
     var timer = setInterval(function () {
         if (op >= 1){
             clearInterval(timer);
         }
+
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.1;
-    }, 10);
+
+    }, 5);
+
 }
 
