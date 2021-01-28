@@ -76,38 +76,36 @@ function showContactArea() {
 
 */
 
-const servCards = document.querySelectorAll('.servicos-card div')
-const servTexts = document.querySelectorAll('.servicos-card p')
+const cards = document.querySelectorAll('.servicos-card div')
 
-const texts = [`<p class="serv-card-text">Por meio de registros adequados e de um bom acompanhamento por parte do gestor, é possível obter informações que contribuam para o planejamento do negócio e para a otimização dos resultados como um todo.
-<br>Dessa forma, a gestão financeira engloba todas as atividades vinculadas ao controle dos recursos financeiros da empresa, visando garantir que a sociedade empresarial tenha dinheiro suficiente para manutenção, investimentos e crescimento próprio.
-</p>`,`<p class="serv-card-text">Por meio de registros adequados e de um bom acompanhamento por parte do gestor, é possível obter informações que contribuam para o planejamento do negócio e para a otimização dos resultados como um todo.
-<br>Dessa forma, a gestão financeira engloba todas as atividades vinculadas ao controle dos recursos financeiros da empresa, visando garantir que a sociedade empresarial tenha dinheiro suficiente para manutenção, investimentos e crescimento próprio.
-</p>`]
+console.log(cards)
 
-servCards.forEach( card => {
-    card.addEventListener('mouseover', expandingTextCard)
-    card.addEventListener('mouseleave', retractTextCard)
+cards.forEach(card => {
+    card.addEventListener('click', toggleActive)
 })
 
-function expandingTextCard(e) {
-    const cardItem = e.target
+function toggleActive(e) {
+    let elem = e.target 
+    console.log(elem.offsetParent.classList.value)
+    while(elem.offsetParent.classList.value != 'servicos-card'){
+        elem = elem.offsetParent
+    }    
+    elem.classList.toggle('active')
 
-    if(cardItem.className == 'serv-card-title'){
-        setTimeout(unfade(cardItem.nextElementSibling),1000)
+    const bgColor = document.querySelector('.servicos-card')
+    if(bgColor.classList.height != '67vw' && bgColor.classList.height != '43vw') {
+        bgColor.style.height = '30vw'
+    }
+    if(elem.classList.value.split(' ')[0] == 'servico-left' && elem.classList.value.split(' ')[1] == 'active'){
+        bgColor.style.height = '44vw'
+    } else if(elem.classList.value.split(' ')[0] == 'servico-right' && elem.classList.value.split(' ')[1] == 'active'){
+        bgColor.style.height = '67vw'
     }
 }
 
-function retractTextCard (e) {
-    let card = e.target
+function hasActive() {
     
-    console.log('card',card)
-    if(card.className == 'serv-card-title') {
-        fade(card.nextElementSibling)
-        
-    }
 }
-
 
 function fade(element) {
     var op = 1;  // initial opacity
