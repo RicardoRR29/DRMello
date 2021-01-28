@@ -86,7 +86,6 @@ cards.forEach(card => {
 
 function toggleActive(e) {
     let elem = e.target 
-    console.log(elem.offsetParent.classList.value)
     while(elem.offsetParent.classList.value != 'servicos-card'){
         elem = elem.offsetParent
     }    
@@ -95,11 +94,16 @@ function toggleActive(e) {
     const bgColor = document.querySelector('.servicos-card')
     if(bgColor.classList.height != '67vw' && bgColor.classList.height != '43vw') {
         bgColor.style.height = '30vw'
+        bgColor.style.backgroundColor = '#777'
     }
     if(elem.classList.value.split(' ')[0] == 'servico-left' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = '44vw'
+        bgColor.style.backgroundColor = '#555'
+
     } else if(elem.classList.value.split(' ')[0] == 'servico-right' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = '67vw'
+        bgColor.style.backgroundColor = '#555'
+
     }
 }
 

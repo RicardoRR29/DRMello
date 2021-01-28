@@ -4,7 +4,6 @@
     justify-content: center;
     transition: height 1s linear, background-color 1s;
     width: 100%;
-    background-color: #555;
 }
 /*
 .servicos-section:hover {
@@ -17,7 +16,8 @@
     position: relative;
     width: 100%;
     height: 30vw;
-    transition: height 1s;
+    transition: height 1s, background-color 1s;
+    background-color: #777;
 }
 
 .servicos-section .servico-left,
