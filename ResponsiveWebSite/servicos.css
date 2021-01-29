@@ -35,7 +35,20 @@
     background-color: #fff;
     font-weight: 400;
     font-size: 0vw;
-    transition: height 1s, width 1s, left 1s, font-size 1s;
+    transition: height 1s, width 1s, left 1s, font-size 1s, background-color 1s;
+}
+
+.servicos-section .servico-left:hover,
+.servicos-section .servico-right:hover  {
+    background-image: linear-gradient(
+        to right,
+        #fcfcfc 0%,
+        #f5f5f6 10%,
+        #fcfcfc 20%,
+        #fcfcfc 100%
+    );
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
 }
 
 .servicos-section .servico-right {
@@ -43,6 +56,10 @@
 
 }
 
+.servicos-section .servico-right.active,
+.servicos-section .servico-left.active {
+    background-image: none;
+}
 
 .servicos-section .servico-left.active {
     width: 90vw;
@@ -154,5 +171,16 @@
 
     .servicos-card {
         height: 20vw;
+    }
+}
+
+
+@keyframes bgPos {
+    0% {
+        background-position: 50% 0;
+    }
+    
+    100% {
+        background-position: -150% 0;
     }
 }

@@ -1,10 +1,15 @@
 
+#about {
+    height: clamp(2rem, 10vw, 800px);
+    transform: translateY(-18vw);
+}
 .text-section {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     color: #000;
     width: 100%;
     padding: clamp(2rem, 10vw, 800px);
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -24,6 +29,11 @@
 }
 
 @media(min-width: 1050px) {
+
+    #about {
+        height: clamp(2rem, 10vw, 800px);
+    }
+
     .text-section {
         padding: 4vw 10vw;
         line-height: 3vw;
