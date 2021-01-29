@@ -1,6 +1,5 @@
-var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
-console.log(height)
+
 const nav = document.querySelector('nav')
 window.addEventListener('scroll', changeNav)
 setTimeout(showWhatsapp,3000)
@@ -81,14 +80,12 @@ function toggleActive(e) {
         left: '44vw',
         right: '67vw',
         normal: '30vw',
-        bgHeight: ''
     }
 
     let desktop = {
         left: '26vw',
         right: '36vw',
         normal: '20vw',
-        bgHeight: ''
     }
 
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -150,3 +147,10 @@ function unfade(element) {
 
 }
 
+const contactBtns = document.querySelectorAll('.contactBtn')
+contactBtns.forEach(btn => btn.addEventListener('click', showContactArea))
+
+function showContactArea() {
+    const cntArea = document.querySelector('.contact-area')
+    cntArea.style.display = 'block'
+}
