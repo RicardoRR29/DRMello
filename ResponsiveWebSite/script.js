@@ -12,8 +12,8 @@ const contact_area = document.querySelector('.contact-area')
 const compactMenu = document.getElementById('compact-menu')
 const sidebar = document.querySelector('.sidebar')
 compactMenu.addEventListener('click', toggleMenu)
+const sidebarBtns = document.querySelectorAll('.sidebar a')
 
-//let frases = ["Organização da tomada de decisão", "Desconhecimento do próximo salto de negócio", "Dificuldade de crescimento", "Expansão de mercado", "Perda de mercado"] 
 
 function toggleMenu() {
     sidebar.classList.toggle('active')
@@ -62,6 +62,7 @@ function showContactArea() {
 */
 
 const cards = document.querySelectorAll('.servicos-card div')
+const cardGrids = document.querySelectorAll('.card-grid')
 
 
 cards.forEach(card => {
@@ -77,44 +78,55 @@ function toggleActive(e) {
 
     let sizes = {}
     let cell = {
-        left: '44vw',
-        right: '67vw',
+        left: '105vw',
+        right: '127vw',
         normal: '30vw',
+        marginLeft: '20vw',
+        marginRight: '43vw'
     }
 
     let desktop = {
-        left: '26vw',
-        right: '36vw',
+        left: '80vw',
+        right: '90vw',
         normal: '20vw',
+        marginLeft: '0',
+        marginRight: '10vw'
     }
 
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     if(width > 1050) {
         sizes = desktop
     } else {
-        sizes = cell 
+        sizes = cell
+        if (width < 500){
+            sizes.left = '137vw'
+            sizes.right = '160vw'
+        }
     }
-
-    
-    const bgColor = document.querySelector('.servicos-card')
+    const cardGrids = document.querySelectorAll('.cards-section')
+    const bgColor = document.querySelector('.servicos-section')
     if(bgColor.classList.height != sizes.left && bgColor.classList.height != sizes.right) {
         bgColor.style.height = sizes.normal
         bgColor.style.backgroundColor = '#aaa'
+        cardGrids.forEach(cardGrid => cardGrid.style.display = 'none')
+        cardGrids[0].style.marginTop = '20vw'
+        
     }
     if(elem.classList.value.split(' ')[0] == 'servico-left' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = sizes.left
         bgColor.style.backgroundColor = '#555'
+        cardGrids[0].style.display = 'grid'
+        cardGrids[0].style.marginTop = sizes.marginLeft
 
     } else if(elem.classList.value.split(' ')[0] == 'servico-right' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = sizes.right
         bgColor.style.backgroundColor = '#555'
+        cardGrids[1].style.display = 'grid'
+        cardGrids[1].style.marginTop = sizes.marginRight
 
     }
 }
 
-function hasActive() {
-    
-}
 
 function fade(element) {
     var op = 1;  // initial opacity
@@ -133,7 +145,6 @@ function unfade(element) {
     var op = 0.1;  // initial opacity
     element.style.display = 'block';
     element.style.maxHeight = '100%'
-    console.log(element)
     var timer = setInterval(function () {
         if (op >= 1){
             clearInterval(timer);

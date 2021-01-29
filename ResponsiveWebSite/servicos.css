@@ -4,6 +4,9 @@
     justify-content: center;
     transition: height 1s linear, background-color 1s;
     width: 100%;
+    transition: height 1s, background-color 1s;
+    background-color: #aaa;
+    height: 20vw;
 }
 /*
 .servicos-section:hover {
@@ -15,9 +18,6 @@
 .servicos-card {
     position: relative;
     width: 100%;
-    height: 30vw;
-    transition: height 1s, background-color 1s;
-    background-color: #aaa;
 }
 
 .servicos-section .servico-left,
@@ -169,7 +169,7 @@
     
     }
 
-    .servicos-card {
+    .servicos-section {
         height: 20vw;
     }
 }
