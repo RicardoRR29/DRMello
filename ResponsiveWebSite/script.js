@@ -1,7 +1,11 @@
+var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
+console.log(height)
 const nav = document.querySelector('nav')
 window.addEventListener('scroll', changeNav)
 setTimeout(showWhatsapp,3000)
+
+//window.addEventListener('click', e => console.log(e))
 
 const contact_area = document.querySelector('.contact-area')
 //window.addEventListener('scroll', showContactArea)
@@ -60,7 +64,6 @@ function showContactArea() {
 
 const cards = document.querySelectorAll('.servicos-card div')
 
-console.log(cards)
 
 cards.forEach(card => {
     card.addEventListener('click', toggleActive)
@@ -73,21 +76,33 @@ function toggleActive(e) {
     }    
     elem.classList.toggle('active')
 
-    let sizes = {
+    let sizes = {}
+    let cell = {
         left: '44vw',
         right: '67vw',
-        normal: '30vw'
+        normal: '30vw',
+        bgHeight: ''
     }
 
     let desktop = {
-        left: '',
-        right: '',
-        normal: ''
+        left: '26vw',
+        right: '36vw',
+        normal: '20vw',
+        bgHeight: ''
     }
+
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    if(width > 1050) {
+        sizes = desktop
+    } else {
+        sizes = cell 
+    }
+
+    
     const bgColor = document.querySelector('.servicos-card')
-    if(bgColor.classList.height != '67vw' && bgColor.classList.height != '43vw') {
+    if(bgColor.classList.height != sizes.left && bgColor.classList.height != sizes.right) {
         bgColor.style.height = sizes.normal
-        bgColor.style.backgroundColor = '#777'
+        bgColor.style.backgroundColor = '#aaa'
     }
     if(elem.classList.value.split(' ')[0] == 'servico-left' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = sizes.left
