@@ -16,24 +16,6 @@ function toggleMenu() {
     sidebar.classList.toggle('active')
 }
 
-/*
-function toggleMenu() {
-    if(sidebar.classList.length == 1){
-        sidebar.classList.add('active')
-        sidebar.style.opacity = 0;
-        setTimeout(() => {
-            sidebar.style.opacity = 1;
-        }, this.animationDelay + 3000);
-    } else {
-        sidebar.classList.remove('active')
-        sidebar.style.opacity = 1;
-        setTimeout(() => {
-            sidebar.style.opacity = 0;
-        }, this.animationDelay + 3000);
-    }
-     
-}
-*/
 function showWhatsapp() {
     wp = document.getElementById('wp')
     wp.style.display = 'block'
@@ -91,17 +73,28 @@ function toggleActive(e) {
     }    
     elem.classList.toggle('active')
 
+    let sizes = {
+        left: '44vw',
+        right: '67vw',
+        normal: '30vw'
+    }
+
+    let desktop = {
+        left: '',
+        right: '',
+        normal: ''
+    }
     const bgColor = document.querySelector('.servicos-card')
     if(bgColor.classList.height != '67vw' && bgColor.classList.height != '43vw') {
-        bgColor.style.height = '30vw'
+        bgColor.style.height = sizes.normal
         bgColor.style.backgroundColor = '#777'
     }
     if(elem.classList.value.split(' ')[0] == 'servico-left' && elem.classList.value.split(' ')[1] == 'active'){
-        bgColor.style.height = '44vw'
+        bgColor.style.height = sizes.left
         bgColor.style.backgroundColor = '#555'
 
     } else if(elem.classList.value.split(' ')[0] == 'servico-right' && elem.classList.value.split(' ')[1] == 'active'){
-        bgColor.style.height = '67vw'
+        bgColor.style.height = sizes.right
         bgColor.style.backgroundColor = '#555'
 
     }
