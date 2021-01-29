@@ -12,7 +12,6 @@ const sidebar = document.querySelector('.sidebar')
 const compactMenu = document.getElementById('compact-menu')
 compactMenu.addEventListener('click', toggleMenu)
 const sidebarBtns = document.querySelectorAll('.sidebar a')
-console.log(sidebarBtns)
 sidebarBtns.forEach(btn => btn.addEventListener('click', hideSidebar))
 
 function hideSidebar() {
@@ -82,19 +81,19 @@ function toggleActive(e) {
 
     let sizes = {}
     let cell = {
-        left: '105vw',
-        right: '127vw',
+        right: '105vw',
+        left: '127vw',
         normal: '30vw',
-        marginLeft: '20vw',
-        marginRight: '43vw'
+        marginRight: '20vw',
+        marginLeft: '43vw'
     }
 
     let desktop = {
-        left: '80vw',
-        right: '90vw',
+        right: '80vw',
+        left: '90vw',
         normal: '20vw',
-        marginLeft: '0',
-        marginRight: '10vw'
+        marginRight: '0',
+        marginLeft: '10vw'
     }
 
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;

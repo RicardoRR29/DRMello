@@ -22,9 +22,9 @@
 
 </head>
 <body>
-    <nav>
-        <a href="#" class="logo"><span>DR</span> Mello</a>
-        <div class="menu">
+    <nav class="naoSelecionavel">
+        <a href="#" class="logo "><span>DR</span> Mello</a>
+        <div class="menu naoSelecionavel">
             <ul>
                 <li><a href="#" class="current">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -40,24 +40,24 @@
         </div>
         
     </nav>
-    <div class="sidebar">
-        <a href="#">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#services">Serviços</a>
-        <a href="#contact" class="contactBtn">Contato</a>
+    <div class="sidebar naoSelecionavel">
+        <a class="naoSelecionavel" href="#">Home</a>
+        <a class="naoSelecionavel" href="#about">Sobre</a>
+        <a class="naoSelecionavel" href="#services">Serviços</a>
+        <a class="naoSelecionavel" href="#contact" class="contactBtn">Contato</a>
     </div>
 
-    <div class="image-section hero">
+    <div class="image-section hero naoSelecionavel">
         <img src="./img/cidade.jpg" alt="">
         <h2 class="title centered">Daniele Ribeiro Mello</h2>
         <h3 class="subtitle centered">Administrativo e Jurídico</h3>
         <div class="img-container centered"></div>
     </div>
-    <div id="about"></div>
     <div class="text-section">
         <div  class="title">
             Sobre nós
         </div>
+        <div id="about"></div>
         <p  class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit esse facere veritatis sint ea quisquam fugiat autem quia quaerat necessitatibus. Possimus facilis tempore laudantium officia iste sequi ullam consequuntur aliquam delectus beatae, ducimus maiores ut, minima asperiores corporis totam sed nulla id quas. Dolore iusto excepturi nihil doloribus eligendi maiores voluptates maxime cumque illo ratione deserunt totam dolores beatae debitis exercitationem consequatur, nulla expedita pariatur hic. Repellendus non doloribus libero, vel, incidunt eos fuga, itaque error dignissimos delectus iste! Laborum.</p>
     </div>
     <!--
@@ -68,18 +68,18 @@
     -->
 
     <div id="services" class="cor-clara"></div>
-    <div class="servicos-section">
+    <div class="servicos-section naoSelecionavel" >
         <div class="servicos-card">
             <div class="servico-left">
-                <h2 class="serv-card-title">Jurídico</h2>
-                <p class="serv-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, labore ad beatae aspernatur quia fuga iusto nesciunt! Sed quaerat reiciendis quia et voluptate, est impedit nesciunt labore, harum ad blanditiis?</p>
-                
-            </div>
-            <div class="servico-right">
-                <h2 class="serv-card-title">Administrativo</h2>
+                <h2 class="serv-card-title">Financeiro</h2>
                 <p class="serv-card-text">Por meio de registros adequados e de um bom acompanhamento por parte do gestor, é possível obter informações que contribuam para o planejamento do negócio e para a otimização dos resultados como um todo.
                     <br>Dessa forma, a gestão financeira engloba todas as atividades vinculadas ao controle dos recursos financeiros da empresa, visando garantir que a sociedade empresarial tenha dinheiro suficiente para manutenção, investimentos e crescimento próprio.
                 </p>
+                
+            </div>
+            <div class="servico-right">
+                <h2 class="serv-card-title">Jurídico</h2>
+                <p class="serv-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, labore ad beatae aspernatur quia fuga iusto nesciunt! Sed quaerat reiciendis quia et voluptate, est impedit nesciunt labore, harum ad blanditiis?</p>
             </div>
         </div>
 
@@ -87,7 +87,7 @@
             <div class="cards-section grid-container">
                 <div class="card">
                     <i class="fas fa-chart-bar"></i>
-                    <h2>Análise de Saúde Financeira</h2>
+                    <h2>Diagnóstico da Saúde Financeira</h2>
                 </div>
                 <div class="card">
                     <i class="fas fa-coins"></i>
@@ -95,12 +95,11 @@
                 </div>
                 <div class="card">
                     <i class="fas fa-handshake"></i>
-                    <h2>Elaboração de Contratos</h2>
+                    <h2>Elaboração e Análise de Contratos</h2>
                 </div>
                 <div class="card">
                     <i class="fas fa-file-invoice"></i>
-                    <!--<i class="fas fa-folder-open"></i>-->
-                    <h2>Análise de Contratos Já Existentes</h2>
+                    <h2>Negociação com Fornecedor e Institucionais</h2>
                 </div>
                 <div class="card">
                     <i class="fas fa-user-friends"></i>
