@@ -8,12 +8,16 @@ setTimeout(showWhatsapp,3000)
 
 const contact_area = document.querySelector('.contact-area')
 //window.addEventListener('scroll', showContactArea)
-
-const compactMenu = document.getElementById('compact-menu')
 const sidebar = document.querySelector('.sidebar')
+const compactMenu = document.getElementById('compact-menu')
 compactMenu.addEventListener('click', toggleMenu)
 const sidebarBtns = document.querySelectorAll('.sidebar a')
+console.log(sidebarBtns)
+sidebarBtns.forEach(btn => btn.addEventListener('click', hideSidebar))
 
+function hideSidebar() {
+    sidebar.classList.remove('active')
+}
 
 function toggleMenu() {
     sidebar.classList.toggle('active')
