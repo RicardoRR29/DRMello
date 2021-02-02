@@ -30,10 +30,7 @@
 
 @media(min-width: 1050px) {
 
-    #about {
-        height: clamp(2rem, 10vw, 800px);
-    }
-
+    
     .text-section {
         padding: 4vw 10vw;
         line-height: 3vw;

@@ -81,10 +81,10 @@ function toggleActive(e) {
 
     let sizes = {}
     let cell = {
-        right: '105vw',
-        left: '127vw',
+        right: '110vw',
+        left: '125vw',
         normal: '30vw',
-        marginRight: '20vw',
+        marginRight: '22vw',
         marginLeft: '43vw'
     }
 
@@ -102,8 +102,8 @@ function toggleActive(e) {
     } else {
         sizes = cell
         if (width < 500){
-            sizes.left = '137vw'
-            sizes.right = '160vw'
+            sizes.left = '180vw'
+            sizes.right = '146vw'
         }
     }
     const cardGrids = document.querySelectorAll('.cards-section')
