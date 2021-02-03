@@ -89,8 +89,8 @@ function toggleActive(e) {
     }
 
     let desktop = {
-        right: '65vw',
-        left: '75vw',
+        right: '70vw',
+        left: '80vw',
         normal: '20vw',
         marginRight: '0',
         marginLeft: '10vw'
