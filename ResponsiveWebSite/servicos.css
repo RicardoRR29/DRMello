@@ -3,7 +3,7 @@
     position: relative;
     justify-content: center;
     transition: height 1s linear, background-color 1s;
-    width: 100%;
+    width: 100vw;
     transition: height 1s, background-color 1s;
     background-color: #aaa;
     height: 20vw;
