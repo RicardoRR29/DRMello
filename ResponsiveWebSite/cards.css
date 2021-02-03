@@ -1,12 +1,12 @@
 
 .cards-section {
-    width: 70vw;
+    width: 80vw;
     color: #444;
-    margin:  2vw 0vw;
+    margin:  1vw 0vw;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1.2vw;
+    gap: 1.5vw;
     display: none;
     padding: 2vw 2vw;
 }
