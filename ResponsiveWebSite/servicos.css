@@ -3,7 +3,7 @@
     position: relative;
     justify-content: center;
     transition: height 1s linear, background-color 1s;
-    width: 100vw;
+    width: 100%;
     transition: height 1s, background-color 1s;
     background-color: #aaa;
     height: 20vw;
@@ -43,10 +43,11 @@
     background-image: linear-gradient(
         to right,
         #fcfcfc 0%,
-        #f5f5f6 10%,
+        #eeeeeeee 10%,
         #fcfcfc 20%,
         #fcfcfc 100%
     );
+    border: 5px solid #ccc;
     background-size: 200% 100%;
     animation: bgPos 1s linear infinite;
 }
@@ -58,6 +59,7 @@
 
 .servicos-section .servico-right.active,
 .servicos-section .servico-left.active {
+    border: 5px solid #ccc;
     background-image: none;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 }
@@ -119,6 +121,16 @@
     background-color: #fff;
 }
 
+.card-grid{
+    transform: scale(0);
+    opacity: 0;
+    transition: transform .8s ease-in, opacity 1s;
+}
+
+.card-grid.active{
+    opacity: 1;
+    transform: scale(1);
+}
 @media(min-width: 1050px) {
     .servicos-section .servico-left,
     .servicos-section .servico-right  {

@@ -1,14 +1,12 @@
 
 .cards-section {
-    width: 80vw;
-    justify-content: center;
+    width: 28vh;
     color: #444;
-    margin:  2vw 10vw;
+    margin:  2vw 0vw;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 2vw;
-    left: 50%;
+    gap: 1.2vw;
     display: none;
     padding: 2vw 2vw;
 }
@@ -23,7 +21,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 3vw;
     padding: 2vw 1vw;
-    margin: clamp(5px,1vw,4000px);
+    margin: clamp(5px,1vw,400px);
 }
 
 .card i {
@@ -40,25 +38,36 @@
 }
 /**/
 .card-grid {
-    margin-top: 27vw;
+    position: absolute;
+    margin-top: 30vw;
 }
 
 @media (min-width: 500px) {
 
     .cards-section {
+        width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
     .card {
-        padding: 1vw;
+        padding: 1vw 1vw;
 
     }
     .card h2 {
-        padding: 1vw;
+        width: 20vw;
         font-size: 1.5vw;
-        /*margin: 1vw;*/
         text-align: center;
         text-size-adjust: auto;
-        /*padding-bottom: 15px;*/
     }
+}
+
+@media (min-width: 1050px) {
+    .cards-section {
+        transform: scale(0.7);
+        gap: 2vw;
+    }
+    .card-grid {
+        margin-top: 19vw;
+    }
+    
 }

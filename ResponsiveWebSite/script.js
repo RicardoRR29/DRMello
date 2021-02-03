@@ -89,8 +89,8 @@ function toggleActive(e) {
     }
 
     let desktop = {
-        right: '80vw',
-        left: '90vw',
+        right: '65vw',
+        left: '75vw',
         normal: '20vw',
         marginRight: '0',
         marginLeft: '10vw'
@@ -107,23 +107,27 @@ function toggleActive(e) {
         }
     }
     const cardGrids = document.querySelectorAll('.cards-section')
+    const gridCards = document.querySelectorAll('.card-grid')
     const bgColor = document.querySelector('.servicos-section')
     if(bgColor.classList.height != sizes.left && bgColor.classList.height != sizes.right) {
         bgColor.style.height = sizes.normal
         bgColor.style.backgroundColor = '#aaa'
         cardGrids.forEach(cardGrid => cardGrid.style.display = 'none')
-        cardGrids[0].style.marginTop = '20vw'
+        gridCards.forEach(gridCard => gridCard.classList.remove('active'))
+        //cardGrids[0].style.marginTop = '20vw'
         
     }
     if(elem.classList.value.split(' ')[0] == 'servico-left' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = sizes.left
-        bgColor.style.backgroundColor = '#555'
+        bgColor.style.backgroundColor = '#777'
+        gridCards[0].classList.add('active')
         cardGrids[0].style.display = 'grid'
         cardGrids[0].style.marginTop = sizes.marginLeft
 
     } else if(elem.classList.value.split(' ')[0] == 'servico-right' && elem.classList.value.split(' ')[1] == 'active'){
         bgColor.style.height = sizes.right
-        bgColor.style.backgroundColor = '#555'
+        bgColor.style.backgroundColor = '#777'
+        gridCards[1].classList.add('active')
         cardGrids[1].style.display = 'grid'
         cardGrids[1].style.marginTop = sizes.marginRight
 
