@@ -116,6 +116,7 @@ html {
 
     .contact-area button:active {
         transform: scale(0.98);
+        border: 2px solid #888;
     }
     .contact-area input::placeholder,
     .contact-area button::placeholder,

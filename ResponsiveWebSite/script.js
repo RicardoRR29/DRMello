@@ -1,3 +1,4 @@
+//document.getElementById("loader").addEventListener("load", fade(document.getElementById('loader')));
 
 
 const nav = document.querySelector('nav')
@@ -50,7 +51,7 @@ function showWhatsapp() {
     wp.style.opacity = 0;
     setTimeout(() => {
         wp.style.opacity = 1;
-    }, this.animationDelay + 3000);   
+    }, this.animationDelay + 8000);   
 
 }
 /*
@@ -172,3 +173,12 @@ function showContactArea() {
     const cntArea = document.querySelector('.contact-area')
     cntArea.style.display = 'block'
 }
+
+const loader = document.getElementById('loader')
+const name = ['Daniele', 'Ribeiro', 'Mello']
+const firstName = document.createElement('div')
+
+firstName[0].forEach(l => {
+    const elem = document.createElement('span')
+    loader.appendChild(elem)
+})
